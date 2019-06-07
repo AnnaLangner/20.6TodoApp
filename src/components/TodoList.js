@@ -1,4 +1,7 @@
 import React from "react";
+import Todo from './Todo';
+
+const TodoList = props => <h2>{props.todoList}</h2>
 
 class TodoList extends React.Component {
     constructor(props) {
