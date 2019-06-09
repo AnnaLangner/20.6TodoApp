@@ -1,49 +1,17 @@
 import React from "react";
-import Todo from './Todo';
+import style from './TodoList.css';
 
-const TodoList = props => <h2>{props.todoList}</h2>
+const TodoList = props =>
 
-class TodoList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: [
-                {
-                    id: 1,
-                    text: 'task one'
-                }, {
-                    id: 2,
-                    text: 'task two'
-                }, {
-                    id: 3,
-                    text: 'task three'
-                }
-            ]
-        };
-    }
-    remove(id) {
-        const removeTask = this.state.data.filter(todoList => todoList.id !== id);
-        this.setState({data: removeTask});
-    }
-}
+    <div className={style.TaskList}>
+        {props.data.map(todo =>
+            <div key={todo.id}
+                 onClick={() => { props.removeTodo(todo.id) }} className={style.Task}>
+                <div >{todo.id}</div>
+                <div>{todo.text}</div>
+            </div>
+        )}
+    </div>
 
 export default TodoList;
 
-// export default [
-//     {
-//         task: 'one',
-//         description: ''
-//     },
-//     {
-//         task: 'two',
-//         description: ''
-//     },
-//     {
-//         task: 'three',
-//         description: ''
-//     },
-//     {
-//         task: 'four',
-//         description: ''
-//     }
-// ]

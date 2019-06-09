@@ -1,24 +1,25 @@
 {
-  "name": "20.6TodoApp",
+  "name": "20.4ConnectingWebpackWithReact",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --env development",
-    "build": "webpack --env production"
+    "start": "webpack-dev-server --hot --env development",
+    "build": "webpack --env production",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnnaLangner/20.6TodoApp.git"
+    "url": "git+https://github.com/AnnaLangner/20.4ConnectingWebpackWithReact.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AnnaLangner/20.6TodoApp/issues"
+    "url": "https://github.com/AnnaLangner/20.4ConnectingWebpackWithReact/issues"
   },
-  "homepage": "https://github.com/AnnaLangner/20.6TodoApp#readme",
+  "homepage": "https://github.com/AnnaLangner/20.4ConnectingWebpackWithReact#readme",
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
@@ -31,7 +32,9 @@
     "react-dom": "^16.8.6",
     "style-loader": "^0.23.1",
     "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^3.3.2",
+    "react-hot-loader": "^4.8.3",
+    "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
     "uuid": "^3.3.2"
