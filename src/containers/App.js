@@ -38,7 +38,7 @@ class App extends React.Component {
     render() {
         return (
             <div className={style.TodoApp}>
-                <Title title={'Todo App'} todoList={todoList.length}/>
+                <Title title={'Todo App'} todoList={TodoList.length}/>
                 <TodoList data={this.state.data} removeTodo={this.removeTodo}/>
             </div>
         );
